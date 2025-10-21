@@ -1,0 +1,281 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+main { flex: 1; }
+
+/* Kartice i dugmad */
+.card {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+input.form-control-lg {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+}
+
+input.form-control-lg:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 6px rgba(13, 110, 253, 0.4);
+}
+
+button.btn-primary, .btn-warning {
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+button.btn-primary:hover {
+    transform: scale(1.03);
+}
+
+/* Kod blok */
+pre {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffc107 !important;
+}
+
+/* Slike */
+.media-card img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.media-card img:hover {
+    transform: scale(1.02);
+}
+
+/* Modal */
+.modal-content {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+/* Navbar underline effect */
+.navbar .nav-link {
+    position: relative;
+    color: #fff;
+}
+
+.navbar .nav-link:not(.dropdown-toggle)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* malo ispod teksta */
+    width: 0;
+    height: 2px;
+    background-color: #ffc107; /* žuta crtica */
+    transition: width 0.25s ease;
+}
+
+.navbar .nav-link:not(.dropdown-toggle):hover::after,
+.navbar .nav-link:not(.dropdown-toggle):focus::after {
+    width: 100%;
+}
+
+/* Aktivna stranica stalno podvučena */
+.navbar .nav-link.active:not(.dropdown-toggle)::after {
+    width: 100%;
+}
+
+/* Alert styling */
+.alert {
+    color: #dc3545 !important;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+/* Error styling */
+.text-danger {
+    color: #dc3545 !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+
+/* 📱 RESPONSIVE PRIKAZ - Mobilni uređaji */
+@media (max-width: 768px) {
+
+  /* Slike centrirane na sredinu */
+  .media-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .media-card img {
+    width: 90% !important;
+    max-width: 350px;
+    height: auto;
+  }
+
+  /* Centriranje redova sa slikama */
+  .row.g-4.mb-5.align-items-center.justify-content-center {
+    text-align: center;
+  }
+
+  /* Forma i input manji i prilagođeni ekranu */
+  #algoritamForm {
+    flex-direction: column;
+  }
+
+  #algoritamForm .col-md-8,
+  #algoritamForm .col-md-2 {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  #algoritamForm button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* API kartica – sprečavanje presecanja koda */
+  #resultCard pre {
+    font-size: 0.85rem;
+    white-space: pre-wrap; /* prelama linije teksta */
+    word-break: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  /* Da se kartica lepo vidi */
+  #resultCard {
+    padding: 1rem;
+  }
+
+  /* Naslov i opis centrirani */
+  #apiResult h2,
+  #apiResult h5 {
+    text-align: center;
+  }
+
+  /* Logo manji i lepši u navbaru */
+  .navbar-brand img.logo-img {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+  }
+}
+
+.navbar .nav-link.active {
+  position: relative;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffc107; /* žuta linija */
+  border-radius: 2px;
+}
+
+
+
+/* ===== LOGO ===== */
+.logo-img {
+  position: absolute;
+  top: -40px;
+  left: 25px;
+  height: 180px;
+  width: auto;
+  z-index: 9999; /* uvek iznad svega */
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+  transition: transform 0.3s ease, filter 0.3s ease;
+  pointer-events: none; /* sprečava klikove da ne blokiraju meni */
+}
+
+/* Efekat pri prelasku miša */
+.logo-img:hover {
+  transform: scale(1.07);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: relative;
+  overflow: visible !important; /* omogućava logou da „izviri“ van navbar-a */
+}
+
+.navbar-brand {
+  position: relative;
+  height: 85px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== MOBILNI PRIKAZ (do 768px) ===== */
+@media (max-width: 768px) {
+  .logo-img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    height: 190px !important; /* ZNATNO VEĆI logo */
+    width: auto !important;
+    z-index: 9999;
+  }
+
+  .navbar {
+    overflow: visible !important;
+  }
+
+  .navbar-brand {
+    height: 160px; /* dovoljno prostora za veliki logo */
+    justify-content: center;
+  }
+
+  .navbar-collapse {
+    margin-top: 10px;
+  }
+}
+
+/* ===== VEOMA MALI TELEFONI (do 480px) ===== */
+@media (max-width: 480px) {
+  .logo-img {
+    height: 170px !important; /* i dalje ogroman */
+    margin-top: 5px;
+  }
+
+  .navbar-brand {
+    height: 140px;
+  }
+}

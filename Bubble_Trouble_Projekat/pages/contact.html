@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Algoritmi</title>
+
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar-container shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold">
+                    <img src="../pictures/logo-removebg-preview.png" alt="Logo" class="logo-img">
+                  </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center gap-2">
+                        <li class="nav-item"><a href="../home.html" class="nav-link">Početna</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">O algoritmima</a></li>
+                        <li class="nav-item"><a href="visualization.html" class="nav-link">Vizualizacije</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link active">Kontakt</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="langMenu" role="button" data-toggle="dropdown" aria-expanded="false">Jezik</a>
+                            <ul class="dropdown-menu" aria-labelledby="langMenu">
+                            <li><a class="dropdown-item" href="contact.html">Srpski</a></li>
+                            <li><a class="dropdown-item" href="contact-eng.html">English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="contact-hero text-center text-white d-flex align-items-center justify-content-center">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <h1 class="display-4 font-weight-bold">Kontaktirajte nas</h1>
+            <p class="lead">Pitajte nas bilo šta o algoritmima, optimizaciji i programskim rešenjima.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <main class="flex-grow-1">
+        <section class="contact-section py-5">
+            
+            <div class="video-bg">
+                <!-- Koristi GIF kao "video" pozadinu dok ne bude MP4/WebM -->
+                <img src="../video/Bubble_sort_animation.gif" alt="Video pozadina" class="section-video">
+            </div>
+
+            <!-- Sadržaj preko videa -->
+            <div class="content-layer container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="contact-card shadow-lg p-4 rounded bg-white">
+                            <h3 class="text-center mb-4 text-primary">Pošaljite nam poruku</h3>
+
+                            <form id="contactForm">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="fname">Ime *</label>
+                                        <input type="text" class="form-control form-control-lg" id="fname" placeholder="Unesite ime" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="lname">Prezime *</label>
+                                        <input type="text" class="form-control form-control-lg" id="lname" placeholder="Unesite prezime" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="Unesite email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="topic">Tema poruke</label>
+                                    <select id="topic" class="form-control form-control-lg">
+                                        <option selected>Izaberite...</option>
+                                        <option>Sortiranje algoritama</option>
+                                        <option>Optimizacija koda</option>
+                                        <option>Drugo</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Poruka *</label>
+                                    <textarea id="message" class="form-control form-control-lg" rows="5" placeholder="Napišite vašu poruku..." required></textarea>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">Pošalji</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO BOXES -->
+        <section class="contact-info py-5 bg-white">
+            <div class="container">
+                <div class="row text-center justify-content-center">
+                    <div class="col-md-4 mb-4 d-flex">
+                        <div class="info-box p-4 rounded shadow-sm w-100">
+                            <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                            <h5>Email podrška</h5>
+                            <p>Odgovaramo u roku od 24h.</p>
+                            <a href="mailto:algoritmi.support@gmail.com">algoritmi.support@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 d-flex">
+                        <div class="info-box p-4 rounded shadow-sm w-100">
+                            <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                            <h5>Telefon</h5>
+                            <p>Pon – Pet, 09–17h</p>
+                            <a href="tel:+381601234567">+381 60 123 4567</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 d-flex">
+                        <div class="info-box p-4 rounded shadow-sm w-100">
+                            <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                            <h5>Adresa</h5>
+                            <p>Algoritamski centar, Novi Pazar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <!-- FOOTER -->
+  <footer class="bg-primary text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-2">© 2025 Algoritmi Sortiranja | Sva prava zadržana</p>
+    </div>
+  </footer>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+  <script src="../js/contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Algorithms</title>
+
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold">
+            <img src="../pictures/logo-removebg-preview.png" alt="Logo" class="logo-img">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+          <ul class="navbar-nav align-items-center gap-2">
+            <li class="nav-item"><a href="home-eng.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about-eng.html" class="nav-link">About algorithms</a></li>
+            <li class="nav-item"><a href="visualization-eng.html" class="nav-link">Visualizations</a></li>
+            <li class="nav-item"><a href="contact-eng.html" class="nav-link active">Contact</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="langMenu" role="button" data-toggle="dropdown" aria-expanded="false">Language</a>
+              <ul class="dropdown-menu" aria-labelledby="langMenu">
+                <li><a class="dropdown-item" href="contact.html" data-lang="sr">Serbian</a></li>
+                <li><a class="dropdown-item" href="contact-eng.html" data-lang="en">English</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="contact-hero text-center text-white d-flex align-items-center justify-content-center">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <h1 class="display-4 font-weight-bold">Contact Us</h1>
+            <p class="lead">Ask us anything about algorithms, optimization, and programming solutions.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <main class="flex-grow-1">
+        <section class="contact-section py-5">
+            
+            <div class="video-bg">
+                
+                <img src="../video/Bubble_sort_animation.gif" alt="Video background" class="section-video">
+            </div>
+
+            
+            <div class="content-layer container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="contact-card shadow-lg p-4 rounded bg-white">
+                            <h3 class="text-center mb-4 text-primary">Send Us a Message</h3>
+
+                            <form id="contactForm">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="fname">First Name *</label>
+                                        <input type="text" class="form-control form-control-lg" id="fname" placeholder="Enter your first name" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="lname">Last Name *</label>
+                                        <input type="text" class="form-control form-control-lg" id="lname" placeholder="Enter your last name" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="Enter your email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="topic">Message Topic</label>
+                                    <select id="topic" class="form-control form-control-lg">
+                                        <option selected>Select...</option>
+                                        <option>Sorting Algorithms</option>
+                                        <option>Code Optimization</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" class="form-control form-control-lg" rows="5" placeholder="Write your message..." required></textarea>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="contact-info py-5 bg-white">
+            <div class="container">
+                <div class="row text-center justify-content-center">
+                    <div class="col-md-4 mb-4 d-flex">
+                        <div class="info-box p-4 rounded shadow-sm w-100">
+                            <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                            <h5>Email Support</h5>
+                            <p>We respond within 24 hours.</p>
+                            <a href="mailto:algoritmi.support@gmail.com">algoritmi.support@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 d-flex">
+                        <div class="info-box p-4 rounded shadow-sm w-100">
+                            <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                            <h5>Phone</h5>
+                            <p>Mon – Fri, 09:00–17:00</p>
+                            <a href="tel:+381601234567">+381 60 123 4567</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 d-flex">
+                        <div class="info-box p-4 rounded shadow-sm w-100">
+                            <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                            <h5>Address</h5>
+                            <p>Algorithm Center, Novi Pazar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    
+  <footer class="bg-primary text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-2">© 2025 Sorting Algorithms | All rights reserved</p>
+    </div>
+  </footer>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+  <script src="../js/contact-eng.js"></script>
+
+</body>
+</html>
